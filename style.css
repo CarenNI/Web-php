@@ -1,0 +1,111 @@
+/* ===== PALETA DE CORES ===== */
+:root {
+    --cor-fundo: #F5EFE6;
+    --cor-card: #EAE4DA;
+    --cor-azul: #7D8ABC;
+    --cor-azul-claro: #D7DFE8;
+    --cor-texto: #333;
+}
+
+/* ===== CONFIGURAÇÃO GERAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden; /* evita rolagem lateral */
+}
+
+/* ===== CONTAINER CENTRAL ===== */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    background: var(--cor-card);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ===== TÍTULOS ===== */
+h1, h2 {
+    color: var(--cor-azul);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: var(--cor-azul);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== BOTÕES ===== */
+button, input[type="submit"] {
+    background: var(--cor-azul);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: #6d7cb0;
+}
+
+/* ===== INPUTS ===== */
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: var(--cor-azul-claro);
+    margin-top: 5px;
+}
+
+/* ===== TABELA ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: var(--cor-azul);
+    color: white;
+}
+
+td, th {
+    border: 1px solid #bbb;
+    padding: 10px;
+}
+
+/* ===== GAto TRANSPARENTE NO CANTO DIREITO ===== */
+body::before {
+    content: "";
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 45vw;          /* ocupa quase metade da tela */
+    height: 45vw;         /* mantém proporção */
+    max-height: 90vh;     /* garante que não fique gigante demais */
+    background-image: url("img/gato.png"); /* sua imagem */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    opacity: 0.15;        /* transparência suave */
+    pointer-events: none; /* não atrapalha clique */
+    z-index: 0;
+}
+
