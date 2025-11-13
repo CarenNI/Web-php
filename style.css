@@ -19,6 +19,7 @@ body {
     overflow-x: hidden; /* evita rolagem lateral */
 }
 
+
 /* ===== CONTAINER CENTRAL ===== */
 .container {
     max-width: 850px;
@@ -27,7 +28,9 @@ body {
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center; /* adicionado */
 }
+
 
 /* ===== TÍTULOS ===== */
 h1, h2 {
@@ -91,21 +94,8 @@ td, th {
     padding: 10px;
 }
 
-/* ===== GAto TRANSPARENTE NO CANTO DIREITO ===== */
-body::before {
-    content: "";
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 45vw;          /* ocupa quase metade da tela */
-    height: 45vw;         /* mantém proporção */
-    max-height: 90vh;     /* garante que não fique gigante demais */
-    background-image: url("img/gato.png"); /* sua imagem */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom right;
-    opacity: 0.15;        /* transparência suave */
-    pointer-events: none; /* não atrapalha clique */
-    z-index: 0;
+.container img {
+    display: block;
+    margin: 20px auto 0 auto; /* centraliza horizontalmente */
+    max-width: 250px;          /* ajusta tamanho, se quiser */
 }
-

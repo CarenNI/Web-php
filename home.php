@@ -36,6 +36,8 @@ if (!isset($_SESSION['user_id'])) {
             <li><a href="tarefas/tarefas.php">Gerenciar Tarefas</a></li>
             <li><a href="logout.php">Sair</a></li>
         </ul>
+        <img src="img/gato2.png" alt="gato">
+
     </div>
 
 </body>
