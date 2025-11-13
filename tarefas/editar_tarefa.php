@@ -17,7 +17,7 @@ $id = (int) $_GET['id']; // converte para inteiro
 
 // Primeiro, busca a tarefa no banco
 $stmt = $conn->prepare("SELECT * FROM tarefas WHERE id = ?");
-stmt->bind_param("i", $id);
+$stmt->bind_param("i", $id);
 $stmt->execute();
 $resultado = $stmt->get_result();
 $tarefa = $resultado->fetch_assoc();
