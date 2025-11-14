@@ -99,3 +99,7 @@ td, th {
     margin: 20px auto 0 auto; /* centraliza horizontalmente */
     max-width: 250px;          /* ajusta tamanho, se quiser */
 }
+
+ul, li {
+    inherits: false;
+}
